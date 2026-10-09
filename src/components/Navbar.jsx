@@ -5,7 +5,6 @@ import logo from "../assets/images/logotp2.png";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Fungsi helper untuk menentukan warna teks berdasarkan halaman aktif
   const linkStyle = ({ isActive }) =>
     isActive
       ? "text-white font-bold transition-all duration-300"
@@ -28,6 +27,7 @@ export default function Navbar() {
           <NavLink to="/" end className={linkStyle}>Beranda</NavLink>
           <NavLink to="/games" className={linkStyle}>Game Lainnya</NavLink>
           <NavLink to="/history" className={linkStyle}>Riwayat Transaksi</NavLink>
+          <NavLink to="/admin" className={linkStyle}>Admin</NavLink>
           <a 
             href="https://wa.me/6285964345477" 
             target="_blank" 
@@ -58,6 +58,7 @@ export default function Navbar() {
           <NavLink to="/" end onClick={() => setIsOpen(false)} className={linkStyle}>Beranda</NavLink>
           <NavLink to="/games" onClick={() => setIsOpen(false)} className={linkStyle}>Game Lainnya</NavLink>
           <NavLink to="/history" onClick={() => setIsOpen(false)} className={linkStyle}>Riwayat Transaksi</NavLink>
+          <NavLink to="/admin" onClick={() => setIsOpen(false)} className={linkStyle}>Admin</NavLink>
           <a 
             href="https://wa.me/6285964345477" 
             target="_blank" 
